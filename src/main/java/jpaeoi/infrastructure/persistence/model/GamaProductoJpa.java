@@ -1,5 +1,6 @@
 package jpaeoi.infrastructure.persistence.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -10,10 +11,19 @@ import jpaeoi.domain.ProductLine;
 public class GamaProductoJpa {
 
     @Id
+    @Column(name = "gama")
     private String gama;
+
+    @Column(name = "descripcion_texto")
     private String descripcionTexto;
+
+    @Column(name = "descripcion_html")
     private String descripcionHtml;
+
+    @Column(name = "imagen")
     private String imagen;
+
+    @Column(name = "activo")
     private boolean activo;
 
     public String gama() {

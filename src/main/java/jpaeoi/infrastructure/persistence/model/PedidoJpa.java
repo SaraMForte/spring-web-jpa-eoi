@@ -1,5 +1,6 @@
 package jpaeoi.infrastructure.persistence.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -12,13 +13,28 @@ import java.time.LocalDate;
 public class PedidoJpa {
 
     @Id
+    @Column(name = "codigo_pedido")
     private int codigoPedido;
+
+    @Column(name = "fecha_pedido")
     private LocalDate fechaPedido;
+
+    @Column(name = "fecha_esperada")
     private LocalDate fechaEsperada;
+
+    @Column(name = "fecha_entrega")
     private LocalDate fechaEntrega;
+
+    @Column(name = "estado")
     private String estado;
+
+    @Column(name = "comentarios")
     private String comentarios;
+
+    @Column(name = "codigo_cliente")
     private int codigoCliente;
+
+    @Column(name = "activo")
     private boolean activo;
 
     public int codigoPedido() {

@@ -13,7 +13,7 @@ public class Client {
     private String region;
     private String country;
     private String postalCode;
-    private int employeeSalesRepresentativeCode;
+    private Employee employeeSalesRepresentativeCode;
     private double creditLimit;
 
     public int clientCode() {
@@ -112,11 +112,11 @@ public class Client {
         this.postalCode = postalCode;
     }
 
-    public int employeeSalesRepresentativeCode() {
+    public Employee employeeSalesRepresentativeCode() {
         return employeeSalesRepresentativeCode;
     }
 
-    public void setEmployeeSalesRepresentativeCode(int employeeSalesRepresentativeCode) {
+    public void setEmployeeSalesRepresentativeCode(Employee employeeSalesRepresentativeCode) {
         this.employeeSalesRepresentativeCode = employeeSalesRepresentativeCode;
     }
 

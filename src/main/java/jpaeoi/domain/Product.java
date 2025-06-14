@@ -3,7 +3,7 @@ package jpaeoi.domain;
 public class Product {
     private String productCode;
     private String name;
-    private String productLine;
+    private ProductLine productLine;
     private String dimensions;
     private String supplier;
     private String description;
@@ -27,11 +27,11 @@ public class Product {
         this.name = name;
     }
 
-    public String productLine() {
+    public ProductLine productLine() {
         return productLine;
     }
 
-    public void setProductLine(String productLine) {
+    public void setProductLine(ProductLine productLine) {
         this.productLine = productLine;
     }
 

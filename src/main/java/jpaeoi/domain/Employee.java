@@ -8,7 +8,7 @@ public class Employee {
     private String extension;
     private String email;
     private Office office;
-    private int managerCode;
+    private Employee manager;
     private String jobTitle;
 
     public int employeeCode() {
@@ -67,12 +67,12 @@ public class Employee {
         this.office = office;
     }
 
-    public int managerCode() {
-        return managerCode;
+    public Employee manager() {
+        return manager;
     }
 
-    public void setManagerCode(int managerCode) {
-        this.managerCode = managerCode;
+    public void setManager(Employee manager) {
+        this.manager = manager;
     }
 
     public String jobTitle() {

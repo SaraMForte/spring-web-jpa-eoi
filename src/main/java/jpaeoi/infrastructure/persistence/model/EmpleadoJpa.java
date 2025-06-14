@@ -3,6 +3,8 @@ package jpaeoi.infrastructure.persistence.model;
 import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnDefault;
 
+import java.util.List;
+
 @Entity
 @Table(name = "empleado")
 public class EmpleadoJpa {
@@ -27,17 +29,15 @@ public class EmpleadoJpa {
     @Column(name = "email", nullable = false, length = 100)
     private String email;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigo_oficina")
-    private Oficina codigoOficina;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigo_jefe")
-    private EmpleadoJpa codigoJefe;
+    @Column(name = "codigo_jefe")
+    private Integer codigoJefe;
 
     @ColumnDefault("NULL")
     @Column(name = "puesto", length = 50)
     private String puesto;
+
+    @OneToMany(mappedBy = "codigoEmpleadoRepVentas", fetch = FetchType.LAZY)
+    List<ClienteJpa> clientes;
 
     public String getPuesto() {
         return puesto;
@@ -47,20 +47,12 @@ public class EmpleadoJpa {
         this.puesto = puesto;
     }
 
-    public EmpleadoJpa getCodigoJefe() {
+    public Integer getCodigoJefe() {
         return codigoJefe;
     }
 
-    public void setCodigoJefe(EmpleadoJpa codigoJefe) {
+    public void setCodigoJefe(Integer codigoJefe) {
         this.codigoJefe = codigoJefe;
-    }
-
-    public Oficina getCodigoOficina() {
-        return codigoOficina;
-    }
-
-    public void setCodigoOficina(Oficina codigoOficina) {
-        this.codigoOficina = codigoOficina;
     }
 
     public String getEmail() {

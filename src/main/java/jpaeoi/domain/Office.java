@@ -10,7 +10,6 @@ public class Office {
     private String addressLine1;
     private String addressLine2;
 
-
     public String officeCode() {
         return officeCode;
     }

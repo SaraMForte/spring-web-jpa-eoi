@@ -9,7 +9,7 @@ public class Order {
     private LocalDate deliveryDate;
     private String status;
     private String comment;
-    private int clientCode;
+    private Client client;
 
     public int orderCode() {
         return orderCode;
@@ -59,12 +59,11 @@ public class Order {
         this.comment = comment;
     }
 
-    public int clientCode() {
-        return clientCode;
+    public Client client() {
+        return client;
     }
 
-    public void setClientCode(int clientCode) {
-        this.clientCode = clientCode;
+    public void setClient(Client client) {
+        this.client = client;
     }
-
 }
