@@ -5,8 +5,11 @@ import jpaeoi.domain.Employee;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public interface EmployeeRepository {
+
+    Optional<Employee> findEmployeeById(Integer id);
 
     List<Employee> findEmployeeOfOffices();
 

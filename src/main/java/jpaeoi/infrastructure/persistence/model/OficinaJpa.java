@@ -1,7 +1,7 @@
 package jpaeoi.infrastructure.persistence.model;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.ColumnDefault;
+import jpaeoi.domain.Office;
 
 import java.util.List;
 
@@ -18,7 +18,6 @@ public class OficinaJpa {
     @Column(name = "pais", nullable = false, length = 50)
     private String pais;
 
-    @ColumnDefault("NULL")
     @Column(name = "region", length = 50)
     private String region;
 
@@ -31,7 +30,6 @@ public class OficinaJpa {
     @Column(name = "linea_direccion1", nullable = false, length = 50)
     private String lineaDireccion1;
 
-    @ColumnDefault("NULL")
     @Column(name = "linea_direccion2", length = 50)
     private String lineaDireccion2;
 
@@ -102,4 +100,19 @@ public class OficinaJpa {
         this.codigoOficina = codigoOficina;
     }
 
+    public static OficinaJpa fromDomain(Office office) {
+        if (office == null) return null;
+        OficinaJpa oficinaJpa = new OficinaJpa();
+
+        oficinaJpa.setCodigoOficina(office.officeCode());
+        oficinaJpa.setCiudad(office.city());
+        oficinaJpa.setPais(office.country());
+        oficinaJpa.setRegion(office.region());
+        oficinaJpa.setCodigoPostal(office.postalCode());
+        oficinaJpa.setTelefono(office.phone());
+        oficinaJpa.setLineaDireccion1(office.addressLine1());
+        oficinaJpa.setLineaDireccion2(office.addressLine2());
+
+        return oficinaJpa;
+    }
 }

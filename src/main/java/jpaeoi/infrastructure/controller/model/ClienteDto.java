@@ -1,11 +1,12 @@
 package jpaeoi.infrastructure.controller.model;
 
 
+import jpaeoi.application.EmployeeService;
 import jpaeoi.domain.Client;
 
 import java.util.Objects;
 
-public class ClienteDTO {
+public class ClienteDto {
     private int codigoCliente;
     private String nombreCliente;
     private String nombreContacto;
@@ -21,10 +22,10 @@ public class ClienteDTO {
     private int codigoEmpleadoRepVentas;
     private double limiteCredito;
 
-    public ClienteDTO() {
+    public ClienteDto() {
     }
 
-    public ClienteDTO(int codigoCliente, String nombreCliente, String nombreContacto, String apellidoContacto, String telefono, String fax, String lineaDireccion1, String lineaDireccion2, String ciudad, String region, String pais, String codigoPostal, int codigoEmpleadoRepVentas, double limiteCredito) {
+    public ClienteDto(int codigoCliente, String nombreCliente, String nombreContacto, String apellidoContacto, String telefono, String fax, String lineaDireccion1, String lineaDireccion2, String ciudad, String region, String pais, String codigoPostal, int codigoEmpleadoRepVentas, double limiteCredito) {
         this.codigoCliente = codigoCliente;
         this.nombreCliente = nombreCliente;
         this.nombreContacto = nombreContacto;
@@ -41,7 +42,7 @@ public class ClienteDTO {
         this.limiteCredito = limiteCredito;
     }
 
-    public Client toDomain() {
+    public Client toDomain(EmployeeService employeeService) {
         Client client = new Client();
         client.setClientCode(codigoCliente);
         client.setFirstName(nombreCliente);
@@ -55,13 +56,13 @@ public class ClienteDTO {
         client.setRegion(region);
         client.setCountry(pais);
         client.setPostalCode(codigoPostal);
-        client.setEmployeeSalesRepresentativeCode(codigoEmpleadoRepVentas);
+        client.setEmployeeSalesRepresentative(employeeService.findById(codigoEmpleadoRepVentas).orElseThrow());
         client.setCreditLimit(limiteCredito);
         return client;
     }
 
-    public static ClienteDTO fromDomain(Client client) {
-        return new ClienteDTO(
+    public static ClienteDto fromDomain(Client client) {
+        return new ClienteDto(
                 client.clientCode(),
                 client.firstName(),
                 client.contactName(),
@@ -74,7 +75,7 @@ public class ClienteDTO {
                 client.region(),
                 client.country(),
                 client.postalCode(),
-                client.employeeSalesRepresentativeCode(),
+                client.employeeSalesRepresentative().employeeCode(),
                 client.creditLimit()
         );
     }
@@ -195,7 +196,7 @@ public class ClienteDTO {
     public boolean equals(Object obj) {
         if (obj == this) return true;
         if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (ClienteDTO) obj;
+        var that = (ClienteDto) obj;
         return this.codigoCliente == that.codigoCliente &&
                Objects.equals(this.nombreCliente, that.nombreCliente) &&
                Objects.equals(this.nombreContacto, that.nombreContacto) &&

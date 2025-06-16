@@ -55,7 +55,7 @@ public class ClienteJpa {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "codigo_empleado_rep_ventas")
-    private EmpleadoJpa codigoEmpleadoRepVentas;
+    private EmpleadoJpa empleadoRepVentas;
 
     @ColumnDefault("NULL")
     @Column(name = "limite_credito", precision = 15, scale = 2)
@@ -65,108 +65,12 @@ public class ClienteJpa {
     @Column(name = "activo")
     private Boolean activo;
 
-    public Boolean getActivo() {
-        return activo;
+    public Integer getCodigoCliente() {
+        return codigoCliente;
     }
 
-    public void setActivo(Boolean activo) {
-        this.activo = activo;
-    }
-
-    public BigDecimal getLimiteCredito() {
-        return limiteCredito;
-    }
-
-    public void setLimiteCredito(BigDecimal limiteCredito) {
-        this.limiteCredito = limiteCredito;
-    }
-
-    public EmpleadoJpa getCodigoEmpleadoRepVentas() {
-        return codigoEmpleadoRepVentas;
-    }
-
-    public void setCodigoEmpleadoRepVentas(EmpleadoJpa codigoEmpleadoRepVentas) {
-        this.codigoEmpleadoRepVentas = codigoEmpleadoRepVentas;
-    }
-
-    public String getCodigoPostal() {
-        return codigoPostal;
-    }
-
-    public void setCodigoPostal(String codigoPostal) {
-        this.codigoPostal = codigoPostal;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
-    public String getRegion() {
-        return region;
-    }
-
-    public void setRegion(String region) {
-        this.region = region;
-    }
-
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
-    }
-
-    public String getLineaDireccion2() {
-        return lineaDireccion2;
-    }
-
-    public void setLineaDireccion2(String lineaDireccion2) {
-        this.lineaDireccion2 = lineaDireccion2;
-    }
-
-    public String getLineaDireccion1() {
-        return lineaDireccion1;
-    }
-
-    public void setLineaDireccion1(String lineaDireccion1) {
-        this.lineaDireccion1 = lineaDireccion1;
-    }
-
-    public String getFax() {
-        return fax;
-    }
-
-    public void setFax(String fax) {
-        this.fax = fax;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getApellidoContacto() {
-        return apellidoContacto;
-    }
-
-    public void setApellidoContacto(String apellidoContacto) {
-        this.apellidoContacto = apellidoContacto;
-    }
-
-    public String getNombreContacto() {
-        return nombreContacto;
-    }
-
-    public void setNombreContacto(String nombreContacto) {
-        this.nombreContacto = nombreContacto;
+    public void setCodigoCliente(Integer codigoCliente) {
+        this.codigoCliente = codigoCliente;
     }
 
     public String getNombreCliente() {
@@ -177,12 +81,108 @@ public class ClienteJpa {
         this.nombreCliente = nombreCliente;
     }
 
-    public Integer getId() {
-        return codigoCliente;
+    public String getNombreContacto() {
+        return nombreContacto;
     }
 
-    public void setId(Integer codigoCliente) {
-        this.codigoCliente = codigoCliente;
+    public void setNombreContacto(String nombreContacto) {
+        this.nombreContacto = nombreContacto;
+    }
+
+    public String getApellidoContacto() {
+        return apellidoContacto;
+    }
+
+    public void setApellidoContacto(String apellidoContacto) {
+        this.apellidoContacto = apellidoContacto;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getFax() {
+        return fax;
+    }
+
+    public void setFax(String fax) {
+        this.fax = fax;
+    }
+
+    public String getLineaDireccion1() {
+        return lineaDireccion1;
+    }
+
+    public void setLineaDireccion1(String lineaDireccion1) {
+        this.lineaDireccion1 = lineaDireccion1;
+    }
+
+    public String getLineaDireccion2() {
+        return lineaDireccion2;
+    }
+
+    public void setLineaDireccion2(String lineaDireccion2) {
+        this.lineaDireccion2 = lineaDireccion2;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(String codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    public EmpleadoJpa getEmpleadoRepVentas() {
+        return empleadoRepVentas;
+    }
+
+    public void setEmpleadoRepVentas(EmpleadoJpa empleadoRepVentas) {
+        this.empleadoRepVentas = empleadoRepVentas;
+    }
+
+    public BigDecimal getLimiteCredito() {
+        return limiteCredito;
+    }
+
+    public void setLimiteCredito(BigDecimal limiteCredito) {
+        this.limiteCredito = limiteCredito;
+    }
+
+    public Boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(Boolean activo) {
+        this.activo = activo;
     }
 
     public Client toDomain() {
@@ -199,8 +199,28 @@ public class ClienteJpa {
         client.setRegion(region);
         client.setCountry(pais);
         client.setPostalCode(codigoPostal);
-        client.setEmployeeSalesRepresentativeCode(codigoEmpleadoRepVentas.getId());
+        client.setEmployeeSalesRepresentative(empleadoRepVentas.toDomain());
         client.setCreditLimit(limiteCredito.doubleValue());
         return client;
     }
+
+    public static ClienteJpa fromDomain(Client client) {
+        ClienteJpa clienteJpa = new ClienteJpa();
+        clienteJpa.setCodigoCliente(client.clientCode());
+        clienteJpa.setNombreCliente(client.firstName());
+        clienteJpa.setNombreContacto(client.contactName());
+        clienteJpa.setApellidoContacto(client.contactLastName());
+        clienteJpa.setTelefono(client.contactPhone());
+        clienteJpa.setFax(client.fax());
+        clienteJpa.setLineaDireccion1(client.addressLine1());
+        clienteJpa.setLineaDireccion2(client.addressLine2());
+        clienteJpa.setCiudad(client.city());
+        clienteJpa.setRegion(client.region());
+        clienteJpa.setPais(client.country());
+        clienteJpa.setCodigoPostal(client.postalCode());
+        clienteJpa.setEmpleadoRepVentas(EmpleadoJpa.fromDomain(client.employeeSalesRepresentative()));
+        clienteJpa.setLimiteCredito(BigDecimal.valueOf(client.creditLimit()));
+        return clienteJpa;
+    }
+
 }

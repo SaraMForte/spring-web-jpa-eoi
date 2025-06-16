@@ -1,7 +1,6 @@
 package jpaeoi.application;
 
 
-
 import jpaeoi.application.exception.DataDeleteException;
 import jpaeoi.domain.Order;
 
@@ -20,7 +19,7 @@ public class ClientDeleteUseCase {
     public void deleteClient(int id) throws DataDeleteException {
         List<Order> orders = orderRepository.findAllOrders()
                 .stream()
-                .filter(order -> id == order.clientCode())
+                .filter(order -> id == order.client().clientCode())
                 .toList();
 
         if (!orders.isEmpty()) {

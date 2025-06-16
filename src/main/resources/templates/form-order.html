@@ -133,7 +133,7 @@
     <form method="post"
           th:action="@{'/form/order?id=' + ${id.get()}}"
           th:if="${id.isPresent()}"
-          th:object="${order}">
+          th:object="${formEntity}">
 
         <div class="form-group">
             <label th:for="*{codigoPedido}">Código del Pedido</label>
@@ -162,7 +162,7 @@
 
         <div class="form-group">
             <label th:for="*{comentarios}">Comentarios</label>
-            <textarea th:field="*{comentarios}"></textarea>
+            <textarea required th:field="*{comentarios}"></textarea>
         </div>
 
         <div class="form-group">
@@ -178,7 +178,7 @@
     <form method="post"
           th:action="@{/form/order}"
           th:if="${id.isEmpty()}"
-          th:object="${order}">
+          th:object="${formEntity}">
 
         <div class="form-group">
             <label th:for="*{codigoPedido}">Código del Pedido</label>

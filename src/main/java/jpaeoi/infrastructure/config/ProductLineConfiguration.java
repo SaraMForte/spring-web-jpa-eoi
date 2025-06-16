@@ -1,4 +1,4 @@
-package jpaeoi.infrastructure.controller.model;
+package jpaeoi.infrastructure.config;
 
 import jpaeoi.application.ProductLineService;
 import jpaeoi.infrastructure.persistence.JpaProductLineRepository;

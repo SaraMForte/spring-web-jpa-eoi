@@ -13,7 +13,7 @@ public class Client {
     private String region;
     private String country;
     private String postalCode;
-    private Employee employeeSalesRepresentativeCode;
+    private Employee employeeSalesRepresentative;
     private double creditLimit;
 
     public int clientCode() {
@@ -112,12 +112,12 @@ public class Client {
         this.postalCode = postalCode;
     }
 
-    public Employee employeeSalesRepresentativeCode() {
-        return employeeSalesRepresentativeCode;
+    public Employee employeeSalesRepresentative() {
+        return employeeSalesRepresentative;
     }
 
-    public void setEmployeeSalesRepresentativeCode(Employee employeeSalesRepresentativeCode) {
-        this.employeeSalesRepresentativeCode = employeeSalesRepresentativeCode;
+    public void setEmployeeSalesRepresentative(Employee employeeSalesRepresentative) {
+        this.employeeSalesRepresentative = employeeSalesRepresentative;
     }
 
     public double creditLimit() {
@@ -143,7 +143,7 @@ public class Client {
                ", region='" + region + '\'' +
                ", country='" + country + '\'' +
                ", postalCode='" + postalCode + '\'' +
-               ", employeeSalesRepresentativeCode=" + employeeSalesRepresentativeCode +
+               ", employeeSalesRepresentativeCode=" + employeeSalesRepresentative +
                ", creditLimit=" + creditLimit +
                '}';
     }

@@ -22,16 +22,17 @@ public interface JpaClientRepository extends JpaRepository<ClienteJpa, Integer>,
 
     @Override
     default void saveClient(Client client) throws DataOperationException {
+        save(ClienteJpa.fromDomain(client));
     }
 
     @Override
     default Optional<Client> findClientById(int id) throws DataOperationException {
-        return Optional.empty();
+        return findById(id).map(ClienteJpa::toDomain);
     }
 
     @Override
     default void updateClient(Client client) throws DataOperationException {
-
+        save(ClienteJpa.fromDomain(client));
     }
 
     @Override

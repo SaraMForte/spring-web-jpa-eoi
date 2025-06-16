@@ -1,8 +1,6 @@
 package jpaeoi.infrastructure.persistence.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jpaeoi.domain.Product;
 
 @Entity
@@ -11,16 +9,26 @@ public class ProductoJpa {
 
     @Id
     private String codigoProducto;
+
     private String nombre;
-    private String gama;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "gama", nullable = false)
+    private GamaProductoJpa gama;
+
     private String dimensiones;
+
     private String proveedor;
+
     private String descripcion;
+
     private int cantidadEnStock;
+
     private float precioVenta;
+
     private float precioProveedor;
 
-    public String codigoProducto() {
+    public String getCodigoProducto() {
         return codigoProducto;
     }
 
@@ -28,7 +36,7 @@ public class ProductoJpa {
         this.codigoProducto = codigoProducto;
     }
 
-    public String nombre() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -36,15 +44,15 @@ public class ProductoJpa {
         this.nombre = nombre;
     }
 
-    public String gama() {
+    public GamaProductoJpa getGama() {
         return gama;
     }
 
-    public void setGama(String gama) {
+    public void setGama(GamaProductoJpa gama) {
         this.gama = gama;
     }
 
-    public String dimensiones() {
+    public String getDimensiones() {
         return dimensiones;
     }
 
@@ -52,7 +60,7 @@ public class ProductoJpa {
         this.dimensiones = dimensiones;
     }
 
-    public String proveedor() {
+    public String getProveedor() {
         return proveedor;
     }
 
@@ -60,7 +68,7 @@ public class ProductoJpa {
         this.proveedor = proveedor;
     }
 
-    public String descripcion() {
+    public String getDescripcion() {
         return descripcion;
     }
 
@@ -68,7 +76,7 @@ public class ProductoJpa {
         this.descripcion = descripcion;
     }
 
-    public int cantidadEnStock() {
+    public int getCantidadEnStock() {
         return cantidadEnStock;
     }
 
@@ -76,7 +84,7 @@ public class ProductoJpa {
         this.cantidadEnStock = cantidadEnStock;
     }
 
-    public float precioVenta() {
+    public float getPrecioVenta() {
         return precioVenta;
     }
 
@@ -84,7 +92,7 @@ public class ProductoJpa {
         this.precioVenta = precioVenta;
     }
 
-    public float precioProveedor() {
+    public float getPrecioProveedor() {
         return precioProveedor;
     }
 
@@ -96,7 +104,7 @@ public class ProductoJpa {
         Product product = new Product();
         product.setProductCode(codigoProducto);
         product.setName(nombre);
-        product.setProductLine(gama);
+        product.setProductLine(gama.toDomain());
         product.setDimensions(dimensiones);
         product.setSupplier(proveedor);
         product.setDescription(descripcion);

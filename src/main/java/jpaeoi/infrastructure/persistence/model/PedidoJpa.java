@@ -1,9 +1,6 @@
 package jpaeoi.infrastructure.persistence.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jpaeoi.domain.Order;
 
 import java.time.LocalDate;
@@ -31,13 +28,14 @@ public class PedidoJpa {
     @Column(name = "comentarios")
     private String comentarios;
 
-    @Column(name = "codigo_cliente")
-    private int codigoCliente;
+    @JoinColumn(name = "codigo_cliente")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private ClienteJpa cliente;
 
     @Column(name = "activo")
     private boolean activo;
 
-    public int codigoPedido() {
+    public int getCodigoPedido() {
         return codigoPedido;
     }
 
@@ -45,7 +43,7 @@ public class PedidoJpa {
         this.codigoPedido = codigoPedido;
     }
 
-    public LocalDate fechaPedido() {
+    public LocalDate getFechaPedido() {
         return fechaPedido;
     }
 
@@ -53,7 +51,7 @@ public class PedidoJpa {
         this.fechaPedido = fechaPedido;
     }
 
-    public LocalDate fechaEsperada() {
+    public LocalDate getFechaEsperada() {
         return fechaEsperada;
     }
 
@@ -61,7 +59,7 @@ public class PedidoJpa {
         this.fechaEsperada = fechaEsperada;
     }
 
-    public LocalDate fechaEntrega() {
+    public LocalDate getFechaEntrega() {
         return fechaEntrega;
     }
 
@@ -69,7 +67,7 @@ public class PedidoJpa {
         this.fechaEntrega = fechaEntrega;
     }
 
-    public String estado() {
+    public String getEstado() {
         return estado;
     }
 
@@ -77,7 +75,7 @@ public class PedidoJpa {
         this.estado = estado;
     }
 
-    public String comentarios() {
+    public String getComentarios() {
         return comentarios;
     }
 
@@ -85,15 +83,15 @@ public class PedidoJpa {
         this.comentarios = comentarios;
     }
 
-    public int codigoCliente() {
-        return codigoCliente;
+    public ClienteJpa getCliente() {
+        return cliente;
     }
 
-    public void setCodigoCliente(int codigoCliente) {
-        this.codigoCliente = codigoCliente;
+    public void setCliente(ClienteJpa cliente) {
+        this.cliente = cliente;
     }
 
-    public boolean activo() {
+    public boolean isActivo() {
         return activo;
     }
 
@@ -109,19 +107,19 @@ public class PedidoJpa {
         pedidoJDBC.setFechaEntrega(order.deliveryDate());
         pedidoJDBC.setEstado(order.status());
         pedidoJDBC.setComentarios(order.comment());
-        pedidoJDBC.setCodigoCliente(order.clientCode());
+        pedidoJDBC.setCliente(ClienteJpa.fromDomain(order.client()));
         return pedidoJDBC;
     }
 
     public Order toDomain() {
         Order domain = new Order();
-        domain.setOrderCode(codigoPedido());
-        domain.setOrderDate(fechaPedido());
-        domain.setExpectedDate(fechaEsperada());
-        domain.setDeliveryDate(fechaEntrega());
-        domain.setStatus(estado());
-        domain.setComment(comentarios());
-        domain.setClientCode(codigoCliente());
+        domain.setOrderCode(codigoPedido);
+        domain.setOrderDate(fechaPedido);
+        domain.setExpectedDate(fechaEsperada);
+        domain.setDeliveryDate(fechaEntrega);
+        domain.setStatus(estado);
+        domain.setComment(comentarios);
+        domain.setClient(cliente.toDomain());
         return domain;
     }
 }
