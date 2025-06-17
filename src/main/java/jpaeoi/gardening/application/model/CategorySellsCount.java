@@ -1,4 +1,4 @@
-package jpaeoi.gandening.application.model;
+package jpaeoi.gardening.application.model;
 
 public class CategorySellsCount {
     private String category;

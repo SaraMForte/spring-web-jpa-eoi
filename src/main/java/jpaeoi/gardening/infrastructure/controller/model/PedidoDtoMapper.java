@@ -1,7 +1,7 @@
-package jpaeoi.gandening.infrastructure.controller.model;
+package jpaeoi.gardening.infrastructure.controller.model;
 
-import jpaeoi.gandening.application.ClientService;
-import jpaeoi.gandening.domain.Order;
+import jpaeoi.gardening.application.ClientService;
+import jpaeoi.gardening.domain.Order;
 import jpaeoi.shared.infrastructure.genericcontroller.DtoMapper;
 import org.springframework.stereotype.Component;
 

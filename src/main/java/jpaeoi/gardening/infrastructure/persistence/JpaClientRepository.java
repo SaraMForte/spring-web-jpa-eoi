@@ -1,9 +1,9 @@
-package jpaeoi.gandening.infrastructure.persistence;
+package jpaeoi.gardening.infrastructure.persistence;
 
-import jpaeoi.gandening.application.ClientRepository;
-import jpaeoi.gandening.application.exception.DataOperationException;
-import jpaeoi.gandening.domain.Client;
-import jpaeoi.gandening.infrastructure.persistence.model.ClienteJpa;
+import jpaeoi.gardening.application.ClientRepository;
+import jpaeoi.gardening.application.exception.DataOperationException;
+import jpaeoi.gardening.domain.Client;
+import jpaeoi.gardening.infrastructure.persistence.model.ClienteJpa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,9 @@
 package jpaeoi.weakentities.domain;
 
-public class exercise {
+public class Exercise {
 
     private int id;
+    private Lesson lesson;
     private String statement;
 
     public int getId() {
@@ -11,6 +12,14 @@ public class exercise {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Lesson getLesson() {
+        return lesson;
+    }
+
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
     }
 
     public String getStatement() {

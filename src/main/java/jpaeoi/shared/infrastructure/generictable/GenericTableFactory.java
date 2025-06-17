@@ -1,4 +1,4 @@
-package jpaeoi.shared.generictable;
+package jpaeoi.shared.infrastructure.generictable;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

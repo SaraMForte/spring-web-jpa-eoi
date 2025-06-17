@@ -1,4 +1,4 @@
-package jpaeoi.gandening.domain;
+package jpaeoi.gardening.domain;
 
 import java.time.LocalDate;
 

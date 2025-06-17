@@ -1,4 +1,4 @@
-package jpaeoi.gandening.domain;
+package jpaeoi.gardening.domain;
 
 public class Office {
     private String officeCode;

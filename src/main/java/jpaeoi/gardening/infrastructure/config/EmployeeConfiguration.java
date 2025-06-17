@@ -1,7 +1,7 @@
-package jpaeoi.gandening.infrastructure.config;
+package jpaeoi.gardening.infrastructure.config;
 
-import jpaeoi.gandening.application.EmployeeService;
-import jpaeoi.gandening.infrastructure.persistence.JpaEmployeeRepository;
+import jpaeoi.gardening.application.EmployeeService;
+import jpaeoi.gardening.infrastructure.persistence.JpaEmployeeRepository;
 import org.springframework.context.annotation.Bean;
 
 public class EmployeeConfiguration {

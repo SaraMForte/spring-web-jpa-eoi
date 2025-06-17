@@ -1,8 +1,8 @@
-package jpaeoi.gandening.infrastructure.persistence;
+package jpaeoi.gardening.infrastructure.persistence;
 
-import jpaeoi.gandening.application.ProductRepository;
-import jpaeoi.gandening.domain.Product;
-import jpaeoi.gandening.infrastructure.persistence.model.ProductoJpa;
+import jpaeoi.gardening.application.ProductRepository;
+import jpaeoi.gardening.domain.Product;
+import jpaeoi.gardening.infrastructure.persistence.model.ProductoJpa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

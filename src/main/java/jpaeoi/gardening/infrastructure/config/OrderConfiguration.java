@@ -1,12 +1,12 @@
-package jpaeoi.gandening.infrastructure.config;
+package jpaeoi.gardening.infrastructure.config;
 
-import jpaeoi.gandening.application.OrderService;
-import jpaeoi.gandening.domain.Order;
+import jpaeoi.gardening.application.OrderService;
+import jpaeoi.gardening.domain.Order;
 import jpaeoi.shared.infrastructure.genericcontroller.GenericControllerConfig;
 import jpaeoi.shared.infrastructure.genericcontroller.DtoMapper;
-import jpaeoi.gandening.infrastructure.controller.model.PedidoDto;
-import jpaeoi.gandening.infrastructure.controller.model.PedidoDtoMapper;
-import jpaeoi.gandening.infrastructure.persistence.JpaOrderRepository;
+import jpaeoi.gardening.infrastructure.controller.model.PedidoDto;
+import jpaeoi.gardening.infrastructure.controller.model.PedidoDtoMapper;
+import jpaeoi.gardening.infrastructure.persistence.JpaOrderRepository;
 import jpaeoi.shared.infrastructure.generictable.GenericTable;
 import jpaeoi.shared.infrastructure.generictable.GenericTableFactory;
 import org.springframework.context.annotation.Bean;

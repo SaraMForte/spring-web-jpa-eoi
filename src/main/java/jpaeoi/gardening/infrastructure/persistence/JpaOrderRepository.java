@@ -1,9 +1,9 @@
-package jpaeoi.gandening.infrastructure.persistence;
+package jpaeoi.gardening.infrastructure.persistence;
 
-import jpaeoi.gandening.application.OrderRepository;
-import jpaeoi.gandening.application.exception.DataOperationException;
-import jpaeoi.gandening.domain.Order;
-import jpaeoi.gandening.infrastructure.persistence.model.PedidoJpa;
+import jpaeoi.gardening.application.OrderRepository;
+import jpaeoi.gardening.application.exception.DataOperationException;
+import jpaeoi.gardening.domain.Order;
+import jpaeoi.gardening.infrastructure.persistence.model.PedidoJpa;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;
 

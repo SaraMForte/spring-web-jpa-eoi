@@ -1,7 +1,7 @@
-package jpaeoi.gandening.infrastructure.config;
+package jpaeoi.gardening.infrastructure.config;
 
-import jpaeoi.gandening.application.ProductService;
-import jpaeoi.gandening.infrastructure.persistence.JpaProductRepository;
+import jpaeoi.gardening.application.ProductService;
+import jpaeoi.gardening.infrastructure.persistence.JpaProductRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

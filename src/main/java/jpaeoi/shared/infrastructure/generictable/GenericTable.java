@@ -1,4 +1,4 @@
-package jpaeoi.shared.generictable;
+package jpaeoi.shared.infrastructure.generictable;
 
 import java.util.List;
 

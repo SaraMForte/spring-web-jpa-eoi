@@ -1,6 +1,6 @@
-package jpaeoi.gandening.application;
+package jpaeoi.gardening.application;
 
-import jpaeoi.gandening.domain.ProductLine;
+import jpaeoi.gardening.domain.ProductLine;
 
 import java.util.List;
 import java.util.Optional;

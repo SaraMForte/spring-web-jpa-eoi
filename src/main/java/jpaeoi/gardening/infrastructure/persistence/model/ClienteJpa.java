@@ -1,7 +1,7 @@
-package jpaeoi.gandening.infrastructure.persistence.model;
+package jpaeoi.gardening.infrastructure.persistence.model;
 
 import jakarta.persistence.*;
-import jpaeoi.gandening.domain.Client;
+import jpaeoi.gardening.domain.Client;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.math.BigDecimal;

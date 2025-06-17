@@ -1,4 +1,4 @@
-package jpaeoi.gandening.infrastructure.controller.model;
+package jpaeoi.gardening.infrastructure.controller.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 

@@ -1,4 +1,4 @@
-package jpaeoi.gandening.infrastructure.controller.model;
+package jpaeoi.shared.infrastructure.genericcontroller;
 
 public interface DtoMapper<T, R> {
 

@@ -1,7 +1,7 @@
-package jpaeoi.gandening.application;
+package jpaeoi.gardening.application;
 
-import jpaeoi.gandening.application.model.CategorySellsCount;
-import jpaeoi.gandening.domain.Employee;
+import jpaeoi.gardening.application.model.CategorySellsCount;
+import jpaeoi.gardening.domain.Employee;
 
 import java.util.List;
 import java.util.Map;

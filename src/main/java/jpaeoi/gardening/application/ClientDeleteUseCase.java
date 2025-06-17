@@ -1,8 +1,8 @@
-package jpaeoi.gandening.application;
+package jpaeoi.gardening.application;
 
 
-import jpaeoi.gandening.application.exception.DataDeleteException;
-import jpaeoi.gandening.domain.Order;
+import jpaeoi.gardening.application.exception.DataDeleteException;
+import jpaeoi.gardening.domain.Order;
 
 import java.util.List;
 

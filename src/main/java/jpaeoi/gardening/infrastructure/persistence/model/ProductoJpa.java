@@ -1,7 +1,7 @@
-package jpaeoi.gandening.infrastructure.persistence.model;
+package jpaeoi.gardening.infrastructure.persistence.model;
 
 import jakarta.persistence.*;
-import jpaeoi.gandening.domain.Product;
+import jpaeoi.gardening.domain.Product;
 
 @Entity
 @Table(name = "producto")

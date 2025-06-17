@@ -1,4 +1,4 @@
-package jpaeoi.gandening.application;
+package jpaeoi.gardening.application;
 
 public class ProductLineDeleteUseCase {
 

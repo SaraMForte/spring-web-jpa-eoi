@@ -1,4 +1,4 @@
-package jpaeoi.gandening.domain;
+package jpaeoi.gardening.domain;
 
 public class Client {
     private int clientCode;

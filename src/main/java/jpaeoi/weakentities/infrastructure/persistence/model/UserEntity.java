@@ -1,11 +1,10 @@
-package jpaeoi.weakentities.infrastructure.persistence;
+package jpaeoi.weakentities.infrastructure.persistence.model;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users", schema = "weak_entities")
 public class UserEntity {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

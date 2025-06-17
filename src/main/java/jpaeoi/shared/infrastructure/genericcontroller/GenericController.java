@@ -1,11 +1,9 @@
-package jpaeoi.gandening.infrastructure.controller;
+package jpaeoi.shared.infrastructure.genericcontroller;
 
 import jakarta.servlet.http.HttpServletRequest;
-import jpaeoi.gandening.application.exception.DataDeleteException;
-import jpaeoi.gandening.infrastructure.config.BinderService;
+import jpaeoi.gardening.application.exception.DataDeleteException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -14,13 +12,12 @@ import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
-public class GenericController {
+public abstract class GenericController {
 
     private final ApplicationContext applicationContext;
     private final BinderService binderService;
 
-    public GenericController(ApplicationContext applicationContext, BinderService binderService) {
+    protected GenericController(ApplicationContext applicationContext, BinderService binderService) {
         this.applicationContext = applicationContext;
         this.binderService = binderService;
     }

@@ -1,4 +1,17 @@
 package jpaeoi.weakentities.infrastructure.controller;
 
-public class WeakEntitiesGenericController {
+import jpaeoi.shared.infrastructure.genericcontroller.BinderService;
+import jpaeoi.shared.infrastructure.genericcontroller.GenericController;
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("weak-entities")
+public class WeakEntitiesGenericController extends GenericController {
+
+    public WeakEntitiesGenericController(ApplicationContext applicationContext, BinderService binderService) {
+        super(applicationContext, binderService);
+    }
+
 }

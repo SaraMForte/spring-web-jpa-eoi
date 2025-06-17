@@ -1,6 +1,6 @@
 package jpaeoi.weakentities.domain;
 
-public class user {
+public class User {
     private int id;
     private String name;
 

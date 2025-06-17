@@ -1,7 +1,7 @@
-package jpaeoi.gandening.infrastructure.persistence.model;
+package jpaeoi.gardening.infrastructure.persistence.model;
 
 import jakarta.persistence.*;
-import jpaeoi.gandening.domain.Order;
+import jpaeoi.gardening.domain.Order;
 
 import java.time.LocalDate;
 

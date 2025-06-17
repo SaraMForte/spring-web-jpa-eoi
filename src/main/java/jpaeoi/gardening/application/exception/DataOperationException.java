@@ -1,4 +1,4 @@
-package jpaeoi.gandening.application.exception;
+package jpaeoi.gardening.application.exception;
 
 public class DataOperationException extends RuntimeException {
     public DataOperationException(String message) {

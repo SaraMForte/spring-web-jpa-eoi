@@ -1,9 +1,9 @@
-package jpaeoi.gandening.infrastructure.persistence;
+package jpaeoi.gardening.infrastructure.persistence;
 
-import jpaeoi.gandening.application.EmployeeRepository;
-import jpaeoi.gandening.application.model.CategorySellsCount;
-import jpaeoi.gandening.domain.Employee;
-import jpaeoi.gandening.infrastructure.persistence.model.EmpleadoJpa;
+import jpaeoi.gardening.application.EmployeeRepository;
+import jpaeoi.gardening.application.model.CategorySellsCount;
+import jpaeoi.gardening.domain.Employee;
+import jpaeoi.gardening.infrastructure.persistence.model.EmpleadoJpa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

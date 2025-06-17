@@ -1,7 +1,7 @@
-package jpaeoi.gandening.infrastructure.persistence.model;
+package jpaeoi.gardening.infrastructure.persistence.model;
 
 import jakarta.persistence.*;
-import jpaeoi.gandening.domain.Office;
+import jpaeoi.gardening.domain.Office;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
-package jpaeoi.gandening.infrastructure.persistence.model;
+package jpaeoi.gardening.infrastructure.persistence.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jpaeoi.gandening.domain.ProductLine;
+import jpaeoi.gardening.domain.ProductLine;
 
 @Entity
 @Table(name = "gama_producto")

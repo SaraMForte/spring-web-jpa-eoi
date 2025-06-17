@@ -1,4 +1,4 @@
-package jpaeoi.gardening.infrastructure.config;
+package jpaeoi.shared.infrastructure.genericcontroller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.convert.ConversionService;

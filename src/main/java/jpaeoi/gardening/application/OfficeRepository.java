@@ -1,6 +1,6 @@
-package jpaeoi.gandening.application;
+package jpaeoi.gardening.application;
 
-import jpaeoi.gandening.domain.Office;
+import jpaeoi.gardening.domain.Office;
 
 import java.util.List;
 

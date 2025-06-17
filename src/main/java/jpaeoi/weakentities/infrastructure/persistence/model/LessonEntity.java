@@ -1,11 +1,11 @@
-package jpaeoi.weakentities.infrastructure.persistence;
+package jpaeoi.weakentities.infrastructure.persistence.model;
 
 import jakarta.persistence.*;
+import jpaeoi.weakentities.domain.Lesson;
 
 @Entity
 @Table(name = "lessons", schema = "weak_entities")
 public class LessonEntity {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -29,5 +29,12 @@ public class LessonEntity {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Lesson toDomain() {
+        Lesson lesson = new Lesson();
+        lesson.setId(id);
+        lesson.setTitle(title);
+        return lesson;
     }
 }

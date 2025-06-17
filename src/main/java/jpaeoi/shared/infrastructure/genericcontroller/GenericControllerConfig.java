@@ -1,7 +1,6 @@
-package jpaeoi.gandening.infrastructure.controller;
+package jpaeoi.shared.infrastructure.genericcontroller;
 
-import jpaeoi.gandening.infrastructure.controller.model.DtoMapper;
-import jpaeoi.shared.generictable.GenericTable;
+import jpaeoi.shared.infrastructure.generictable.GenericTable;
 
 import java.util.List;
 import java.util.Optional;

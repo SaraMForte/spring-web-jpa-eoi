@@ -1,4 +1,4 @@
-package jpaeoi.gandening.application.exception;
+package jpaeoi.gardening.application.exception;
 
 public class DataDeleteException extends RuntimeException {
     public DataDeleteException(String message) {
